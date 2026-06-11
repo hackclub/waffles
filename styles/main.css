@@ -132,6 +132,25 @@ nav {
     }
 }
 
+.v2-badge {
+    position: absolute;
+    top: calc(50% - 17vw);
+    right: calc(50% - 45vw);
+    font-family: 'Atop', sans-serif;
+    font-size: 3.5vw;
+    color: #8B4513;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+    text-shadow: 2px 2px 0px #D2691E;
+}
+
+.v2-badge.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 #loader.fade-out {
     opacity: 0;
 }
