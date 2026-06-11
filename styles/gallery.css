@@ -1,0 +1,26 @@
+.gallery-hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 800;
+    color: #8B4513;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 500;
+    color: #D2691E;
+    line-height: 1.6;
+}

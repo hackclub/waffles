@@ -1,153 +1,187 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="Assets/Logo.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waffles | Requirements</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requirements - Waffles</title>
+    <link rel="icon" type="image/svg+xml" href="assets/waffle-favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/requirements.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-  <a href="https://hackclub.com/"><img
-    style="position: absolute; top: 0; left: 10px; border: 0; width: 180px; z-index: 999;"
-    src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club" /></a>
+    <div id="content" class="visible">
+        <a href="https://hackclub.com/" class="flag-link"><img style="border: 0; width: 256px; display: block;" src="assets/flag.svg" alt="Hack Club"/></a>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="requirements.html" class="nav-link">Requirements</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+            </div>
+        </nav>
 
-    <div class="floating-waffle waffle-1">🧇</div>
-    <div class="floating-waffle waffle-2">🧇</div>
-    <div class="floating-waffle waffle-3">🧇</div>
-    <div class="floating-waffle waffle-4">🧇</div>
-  <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="requirements.html">Requirements</a></li>
-            <li><a href="get-started.html">Get Started</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-    </nav>
-    <br>
-    <img id="WafflesLogo" src="Assets/Logo.jpg" alt="Waffle" />
-    <h1><div id="app">Waffles</div></h1>
-    <br>
-    <p class="tagline">YS: A Website with HTML, CSS and a little spread of JavaScript</p>
-    <p class="tagline">WS: Get free waffles</p>
-    <br>
-  </header>
+        <section class="requirements-hero">
+            <h1 class="requirements-title">What You Need to Build</h1>
+            <p class="requirements-subtitle">Build something cool and get waffles. Simple as that.</p>
+        </section>
 
-  <main>
-    <section class="waffle-intro">
-      <h2>Requirements</h2>
-      <h3>All Hack Clubbers globally under the age of 18 are eligible! Any US high school students over the age of 18 can join.</h3>
-      <h2>Your website must:</h2>
-      <h3>
-        <li>Be original (No copy pasting)</li><br>
-        <li>Have 2 Html pages with content</li><br>
-        <li>Have something fun & unique!</li><br>
-        <li>Have 5+ HTML and CSS features for each page</li><br>
-        <li>Have a Javascript Spread (Check Below)</li><br>
-        <li>Be made recently</li><br>
-        <li>Be static (uses HTML + CSS and JavaScript)</li><br>
-        <li>Have text, color and a image</li><br>
-      </h3>
-      <h2>Any Questions?</h2>
-      <h3 class="section-text">Join the <a href="https://app.slack.com/client/T0266FRGM/C08QBKX5WCD">#waffles</a> channel on Hack Club Slack to connect with fellow participants and mentors!</h3>
-        <br>
-        <h3 class="section-text"><strong>Club/Event Questions?:</strong> Send your question in <a href="https://app.slack.com/client/T0266FRGM/C08QBKX5WCD">#waffles</a> on the Hack Club Slack for quick assistance.</h3>
-        <br>
-    </section>
-    <section class="javascript-spread">
-      <h1>JavaScript Spread!</h1>
-      <h2>Each page must have 3 separate JavaScript functions, and each function should:</h2>
-      <div class="card meduim">
-        <h3>1. Interact with the page’s content</h3>
-        <p>Example:</p>
-        <ul>
-          <li>Change text/image on click</li>
-          <li>Show/hide sections</li>
-          <li>Change styles dynamically</li>
-        </ul>
-      </div>
+        <section class="requirements-content">
+            <div class="requirement-block">
+                <div class="req-header">
+                    <span class="req-number">01</span>
+                    <h2 class="req-title">The Basics</h2>
+                </div>
+                <div class="req-body">
+                    <div class="req-item">
+                        <div class="req-label">Two Pages</div>
+                        <div class="req-text">Create two different HTML pages with real content. Not placeholders, not lorem ipsum—actual stuff.</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Your Work</div>
+                        <div class="req-text">Make sure the project is your own. Do not copy and paste code from the internet.</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Make It Yours</div>
+                        <div class="req-text">Add something that makes the site fun or different so it does not feel generic. Give it personality.</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Features</div>
+                        <div class="req-text">Use at least five HTML and CSS features on each page. Show what you know.</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Custom CSS</div>
+                        <div class="req-text">Your site must have custom CSS that you wrote yourself. A stylesheet from the internet does not count on its own.</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Static Only</div>
+                        <div class="req-text">The site should be static, which means just HTML, CSS, and JavaScript. No frameworks needed.</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Content</div>
+                        <div class="req-text">Put some text, colors, and at least one image on each page. Just make sure it looks complete!</div>
+                    </div>
+                    <div class="req-item">
+                        <div class="req-label">Fresh Build</div>
+                        <div class="req-text">The project must be created recently. Old projects do not count.</div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="card meduim">
-        <h3>2. Respond to user input or actions</h3>
-        <p>Functions should respond to user actions:</p>
-        <ul>
-          <li>Respond to button clicks (<code>onclick</code>)</li>
-          <li>Validate form fields Live updates via (<code>onsubmit</code>,<code>onchange</code>)</li>
-          <li>Update text live from an input box (<code>oninput</code>)</li>
-        </ul>
-      </div>
+            <div class="requirement-block">
+                <div class="req-header">
+                    <span class="req-number">02</span>
+                    <h2 class="req-title">JavaScript Functions</h2>
+                </div>
+                <div class="req-body">
+                    <p class="req-intro">Your site needs three different ways for a user to change the content in a meaningful way. At least one must be an incremental clicky button — something that adds up or changes a little more each time it is clicked.</p>
 
-      <div class="card large">
-        <h3>JavaScript Concepts</h3>
-        <p>Each function must demonstrate one of the following:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Concept</th>
-              <th>Example Function</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Event listeners</td>
-              <td><code>button.addEventListener("click", myFunction)</code></td>
-            </tr>
-            <tr>
-              <td>Conditionals</td>
-              <td><code>if (input === "") { alert("Fill this!") }</code></td>
-            </tr>
-            <tr>
-              <td>DOM manipulation</td>
-              <td><code>element.textContent = "Updated!"</code></td>
-            </tr>
-            <tr>
-              <td>Styling via JS</td>
-              <td><code>element.style.color = "red"</code></td>
-            </tr>
-            <tr>
-              <td>Variables + functions</td>
-              <td><code>let count = 0;<br>function increment() { count++ }</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                    <div class="req-subsection">
+                        <div class="req-subsection-title">Required: Use One of These JS Features</div>
+                        <div class="req-text">At least one of your functions must use one of the following:</div>
+                        <div class="req-examples">
+                            <div class="example-label">Pick at least one:</div>
+                            <ul class="example-list concept-list">
+                                <li><code>fetch</code> — pull in data from an external API or website</li>
+                                <li><code>setTimeout</code> — delay something from happening</li>
+                                <li><code>setInterval</code> — repeat something on a timer</li>
+                            </ul>
+                        </div>
+                    </div>
 
-      <div class="card medium">
-        <h3>Important Notes for Submission</h3>
-        <ul>
-          <li><strong>function must visibly affect the page</strong></li>
-          <li><strong>Use clear function names</strong></li>
-          <li><strong>No copy-pasting from websites</strong></li>
-        </ul>
-      </div>
+                    <div class="req-subsection">
+                        <div class="req-subsection-title">Function Type 1: Change Something</div>
+                        <div class="req-text">Your function should change or update something on the page.</div>
+                        <div class="req-examples">
+                            <div class="example-label">Examples:</div>
+                            <ul class="example-list">
+                                <li>Swap an image when it is clicked</li>
+                                <li>Hide or show part of the page</li>
+                                <li>Change the style of an element</li>
+                            </ul>
+                        </div>
+                    </div>
 
-    </section>
-    
-  </main>
+                    <div class="req-subsection">
+                        <div class="req-subsection-title">Function Type 2: React to User</div>
+                        <div class="req-text">Your function should react to something the user does.</div>
+                        <div class="req-examples">
+                            <div class="example-label">Examples:</div>
+                            <ul class="example-list">
+                                <li>Run when someone clicks a button</li>
+                                <li>Check a form before it is submitted</li>
+                                <li>Update text live while the user is typing</li>
+                            </ul>
+                        </div>
+                    </div>
 
-  <footer>
-    <br>
-    <img src="https://swirl.hackclub.com/images/assets/other/stickers/orphmoji-yippee.png" alt="Orpheus Yippee!" style="background: none; width: 50px; margin-bottom: 2px; margin-right: 15px">
-    Made by Navdeep | Funded by Hack Club | Lovely Art made by Abhay
-    <img src="https://swirl.hackclub.com/images/assets/other/stickers/orphmoji-yippee.png" alt="Orpheus Yippee!" style="background: none; width: 50px; margin-bottom: 2px; margin-left: 20px">
-    <br><br><br>
-</footer>
+                    <div class="req-subsection">
+                        <div class="req-subsection-title">Function Type 3: Use Core JavaScript</div>
+                        <div class="req-text">Your function should use a core JavaScript idea.</div>
+                        <div class="req-examples">
+                            <div class="example-label">Pick from these:</div>
+                            <ul class="example-list concept-list">
+                                <li>Event listeners</li>
+                                <li>If statements</li>
+                                <li>Updating the DOM</li>
+                                <li>Changing styles with JavaScript</li>
+                                <li>Variables and functions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="requirement-block final-notes">
+                <div class="req-header">
+                    <span class="req-number">03</span>
+                    <h2 class="req-title">Important Notes</h2>
+                </div>
+                <div class="req-body">
+                    <div class="note-item">
+                        <i class="ph-bold ph-eye"></i>
+                        <p>Each function should clearly affect the page so the user sees what happens.</p>
+                    </div>
+                    <div class="note-item">
+                        <i class="ph-bold ph-code"></i>
+                        <p>Use simple, clear names for your functions.</p>
+                    </div>
+                    <div class="note-item">
+                        <i class="ph-bold ph-x-circle"></i>
+                        <p>Do not copy from websites.</p>
+                    </div>
+                    <div class="note-item">
+                        <i class="ph-bold ph-robot"></i>
+                        <p>Do not use AI tools to write the submission. This includes using AI to generate or clean up your code, generate filler text, create images, or write any part of the site for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="requirement-block">
+                <div class="req-header">
+                    <span class="req-number">04</span>
+                    <h2 class="req-title">Hackatime</h2>
+                </div>
+                <div class="req-body">
+                    <div class="req-item">
+                        <div class="req-label">2 Hours Minimum</div>
+                        <div class="req-text">You must have at least 2 hours logged on <a href="https://hackatime.hackclub.com/" target="_blank">Hackatime</a> for this project. Make sure your editor is set up and tracking time before you start coding.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3 class="cta-title">Ready to build?</h3>
+                <a href="https://submit.hackclub.com/waffles" class="btn btn-primary" target="_blank">
+                    <i class="ph-bold ph-rocket-launch"></i>Submit Your Site
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/requirements.js"></script>
 </body>
-<script>
-  
-  var app = document.getElementById('app');
-
-var typewriter = new Typewriter(app, {
-    loop: true
-});
-
-typewriter.typeString('Waffles')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('Waffles')
-    .pauseFor(2500)
-    .deleteAll()
-    .start();
-  </script>
 </html>

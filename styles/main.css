@@ -1,0 +1,364 @@
+@font-face {
+    font-family: 'Atop';
+    src: url('../assets/Atop.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF8E7;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding-top: 80px;
+}
+
+.flag-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.flag-link:hover {
+    animation: swing 0.6s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 256px;
+    right: 0;
+    background: #FFF8E7;
+    padding: 1rem 2rem 1rem 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border: 3px solid #8B4513;
+    padding: 1rem 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #D2691E;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFF8E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 0.8s ease-out;
+}
+
+.waffle-text {
+    font-family: 'Atop', sans-serif;
+    font-size: 20vw;
+    font-weight: bold;
+    color: #8B4513;
+    text-transform: uppercase;
+    white-space: nowrap;
+    position: absolute;
+    display: flex;
+    letter-spacing: 0.05em;
+}
+
+.waffle-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(120vw);
+    text-shadow:
+        4px 4px 0px #D2691E,
+        8px 8px 20px rgba(139, 69, 19, 0.3);
+    animation: slideLetterFade 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.waffle-text span:nth-child(1) { animation-delay: 0s; }
+.waffle-text span:nth-child(2) { animation-delay: 0.1s; }
+.waffle-text span:nth-child(3) { animation-delay: 0.2s; }
+.waffle-text span:nth-child(4) { animation-delay: 0.3s; }
+.waffle-text span:nth-child(5) { animation-delay: 0.4s; }
+.waffle-text span:nth-child(6) { animation-delay: 0.5s; }
+.waffle-text span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes slideLetterFade {
+    0% {
+        transform: translateX(120vw);
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#loader.fade-out {
+    opacity: 0;
+}
+
+#loader.hidden {
+    display: none;
+}
+
+#content {
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#content.visible {
+    opacity: 1;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 800;
+    color: #8B4513;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    visibility: hidden;
+}
+
+.hero-title .word {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-title .char {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 500;
+    color: #D2691E;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.subtitle-link {
+    color: #8B4513;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.subtitle-link:hover {
+    color: #6B3410;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 3px solid #8B4513;
+    background: white;
+    color: #8B4513;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 6px 6px 0px #8B4513;
+}
+
+.btn-primary {
+    background: #8B4513;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #6B3410;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.quick-actions {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 2px solid rgba(139, 69, 19, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.quick-actions-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #8B4513;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.action-card {
+    padding: 1.5rem;
+    background: white;
+    border: 3px solid #8B4513;
+    text-decoration: none;
+    color: #8B4513;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.action-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 6px 6px 0px #8B4513;
+}
+
+.action-card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.action-card-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.action-card-desc {
+    font-size: 0.9rem;
+    color: #D2691E;
+}
+
+.info-section {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.info-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.info-number {
+    font-family: 'Atop', sans-serif;
+    font-size: 5rem;
+    color: #8B4513;
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: -1rem;
+}
+
+.info-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+.info-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #D2691E;
+}
+
+.info-content strong {
+    color: #8B4513;
+    font-weight: 700;
+}
+
+.info-note {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.info-link {
+    color: #8B4513;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.info-link:hover {
+    color: #D2691E;
+}
