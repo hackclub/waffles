@@ -88,6 +88,12 @@ nav {
     transition: opacity 0.8s ease-out;
 }
 
+.waffle-container {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+}
+
 .waffle-text {
     font-family: 'Atop', sans-serif;
     font-size: 20vw;
@@ -95,9 +101,25 @@ nav {
     color: #8B4513;
     text-transform: uppercase;
     white-space: nowrap;
-    position: absolute;
     display: flex;
     letter-spacing: 0.05em;
+}
+
+.waffle-v2 {
+    font-family: 'Atop', sans-serif;
+    font-size: 5vw;
+    color: #8B4513;
+    text-shadow: 2px 2px 0px #D2691E;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    opacity: 0;
+    animation: fadeInV2 1s ease 1.5s forwards;
+}
+
+@keyframes fadeInV2 {
+    to { opacity: 1; }
 }
 
 .waffle-text span {
@@ -130,25 +152,6 @@ nav {
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-.v2-badge {
-    position: absolute;
-    top: calc(50% - 17vw);
-    right: calc(50% - 45vw);
-    font-family: 'Atop', sans-serif;
-    font-size: 3.5vw;
-    color: #8B4513;
-    opacity: 0;
-    transform: translateY(-8px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
-    pointer-events: none;
-    text-shadow: 2px 2px 0px #D2691E;
-}
-
-.v2-badge.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 #loader.fade-out {

@@ -1,8 +1,4 @@
 setTimeout(() => {
-    document.querySelector('.v2-badge').classList.add('show');
-}, 1550);
-
-setTimeout(() => {
     const loader = document.getElementById('loader');
     loader.classList.add('fade-out');
     document.getElementById('content').classList.add('visible');
@@ -11,7 +7,7 @@ setTimeout(() => {
         loader.classList.add('hidden');
         initAnimations();
     }, 800);
-}, 2400);
+}, 2100);
 
 function initAnimations() {
     const heroTitle = document.querySelector('.hero-title');
