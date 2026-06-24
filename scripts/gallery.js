@@ -30,13 +30,11 @@ async function loadProjects() {
             const name = formatRepoName(p.inferred_repo ?? p.github_username ?? "Project");
             const author = p.github_username ?? p.inferred_username ?? "";
             const url = p.demo_url ?? "";
-            const country = p.country ?? "";
 
             return `<div class="project-card">
                 <div class="project-card-name">${name}</div>
                 <div class="project-card-meta">
-                    ${author ? `<span class="project-card-author">@${author}</span>` : ""}
-                    ${country ? `<span class="project-card-country">${country}</span>` : ""}
+                    ${author ? `<span class="project-card-author">Made by: @${author}</span>` : ""}
                 </div>
                 ${url ? `<a class="project-card-link" href="${url}" target="_blank" rel="noopener">
                     Visit site <i class="ph-bold ph-arrow-up-right"></i>
