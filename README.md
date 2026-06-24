@@ -1,18 +1,33 @@
 # Waffles
-Ys: A Website with HTML, CSS and a little spread of JavaScript  Ws: Get free waffles
+A Hack Club Clubs YSWS :3
+
+You ship: A Website with HTML, CSS and a little bit of JavaScript  
+We ship: Free waffles
 
 Check it out at the waffles [website](https://waffles.hackclub.com/)!
 
 ---
 
-## Localhost Instructions:
+## Running Locally
 
-Download the repo for yourself
+1. **Clone the repo**
+   ```
+   git clone https://github.com/hackclub/waffles.git
+   ```
 
-Go into the waffles directory
+2. **Navigate into the directory**
+   ```
+   cd waffles
+   ```
 
-In terminal:
+3. **Install dependencies**
+   ```
+   npm install
+   ```
 
-npm install
+4. **Start the dev server**
+   ```
+   npm run dev
+   ```
 
-npm run dev
+Then open the local URL shown in your terminal!
