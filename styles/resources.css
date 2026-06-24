@@ -74,6 +74,62 @@
     color: #D2691E;
 }
 
+.faq-section {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.faq-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #8B4513;
+    margin-bottom: 2rem;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    padding: 2rem;
+    background: white;
+    border: 3px solid #8B4513;
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 0.75rem;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #D2691E;
+}
+
+.faq-more {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #D2691E;
+}
+
+.faq-link {
+    color: #8B4513;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.faq-link:hover {
+    color: #D2691E;
+}
+
 @media (max-width: 768px) {
     .resource-card {
         flex-direction: column;

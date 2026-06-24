@@ -216,3 +216,14 @@
         gap: 1rem;
     }
 }
+
+.req-link {
+    color: #8B4513;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.req-link:hover {
+    color: #D2691E;
+}
