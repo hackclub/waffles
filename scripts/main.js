@@ -7,7 +7,7 @@ setTimeout(() => {
         loader.classList.add('hidden');
         initAnimations();
     }, 800);
-}, 2100);
+}, 3200);
 
 function initAnimations() {
     const heroTitle = document.querySelector('.hero-title');

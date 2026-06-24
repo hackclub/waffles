@@ -43,7 +43,7 @@ body {
 nav {
     position: fixed;
     top: 0;
-    left: 256px;
+    left: 0;
     right: 0;
     background: #FFF8E7;
     padding: 1rem 2rem 1rem 0;
@@ -59,6 +59,19 @@ nav {
     align-items: center;
     border: 3px solid #8B4513;
     padding: 1rem 2rem;
+    background: #FFF8E7;
+}
+
+nav::after {
+    content: '';
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, #FFF8E7, transparent);
+    pointer-events: none;
+    z-index: 999;
 }
 
 .nav-link {
@@ -85,7 +98,7 @@ nav {
     justify-content: center;
     z-index: 9999;
     overflow: hidden;
-    transition: opacity 0.8s ease-out;
+    transition: opacity 1.2s ease-out;
 }
 
 .waffle-container {
@@ -109,18 +122,24 @@ nav {
     font-family: 'Atop', sans-serif;
     font-size: 5vw;
     color: #8B4513;
-    text-shadow: 2px 2px 0px #D2691E;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(0);
-    opacity: 0;
-    animation: fadeInV2 1s ease 1.5s forwards;
+    display: flex;
 }
 
-@keyframes fadeInV2 {
-    to { opacity: 1; }
+.waffle-v2 span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(120vw);
+    text-shadow:
+        2px 2px 0px #D2691E,
+        4px 4px 10px rgba(139, 69, 19, 0.3);
+    animation: slideLetterFade 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
+
+.waffle-v2 span:nth-child(1) { animation-delay: 1.5s; }
+.waffle-v2 span:nth-child(2) { animation-delay: 1.6s; }
 
 .waffle-text span {
     display: inline-block;
