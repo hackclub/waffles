@@ -2,6 +2,25 @@ function formatRepoName(repo) {
     return repo.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
+function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, c => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+    }[c]));
+}
+
+function safeUrl(url) {
+    try {
+        const { protocol } = new URL(url);
+        return protocol === 'http:' || protocol === 'https:' ? url : '';
+    } catch {
+        return '';
+    }
+}
+
 async function loadProjects() {
     const grid = document.getElementById('projects-grid');
 
@@ -27,16 +46,16 @@ async function loadProjects() {
         }
 
         grid.innerHTML = projects.map(p => {
-            const name = formatRepoName(p.inferred_repo ?? p.github_username ?? "Project");
-            const author = p.github_username ?? p.inferred_username ?? "";
-            const url = p.demo_url ?? "";
+            const name = escapeHtml(formatRepoName(p.inferred_repo ?? p.github_username ?? "Project"));
+            const author = escapeHtml(p.github_username ?? p.inferred_username ?? "");
+            const url = safeUrl(p.demo_url ?? "");
 
             return `<div class="project-card">
                 <div class="project-card-name">${name}</div>
                 <div class="project-card-meta">
                     ${author ? `<span class="project-card-author">Made by: @${author}</span>` : ""}
                 </div>
-                ${url ? `<a class="project-card-link" href="${url}" target="_blank" rel="noopener">
+                ${url ? `<a class="project-card-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">
                     Visit site <i class="ph-bold ph-arrow-up-right"></i>
                 </a>` : ""}
             </div>`;

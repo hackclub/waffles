@@ -22,12 +22,12 @@ Check it out at the waffles [website](https://waffles.hackclub.com/)!
 
 3. **Install dependencies**
    ```
-   npm install
+   bun install
    ```
 
 4. **Start the dev server**
    ```
-   npm run dev
+   bun run dev
    ```
 
 Then open the local URL shown in your terminal!

@@ -4,34 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waffles</title>
-    <link rel="icon" type="image/svg+xml" href="assets/waffle-favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/waffle-favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <div id="loader">
-        <div class="waffle-container">
-            <div class="waffle-text">
-                <span>W</span><span>A</span><span>F</span><span>F</span><span>L</span><span>E</span><span>S</span>
-            </div>
-            <div class="waffle-v2"><span>v</span><span>2</span></div>
-        </div>
-    </div>
-
-    <div id="content">
-        <a href="https://hackclub.com/" class="flag-link"><img style="border: 0; width: 256px; display: block;" src="assets/flag.svg" alt="Hack Club"/></a>
+    <div id="content" class="visible">
+        <a href="https://hackclub.com/" class="flag-link"><img style="border: 0; width: 256px; display: block;" src="/assets/flag.svg" alt="Hack Club"/></a>
         <nav>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="requirements.html" class="nav-link">Requirements</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/requirements/" class="nav-link">Requirements</a>
+                <a href="/gallery/" class="nav-link">Gallery</a>
+                <a href="/resources/" class="nav-link">Resources</a>
             </div>
         </nav>
 
@@ -40,10 +29,10 @@
                 <h1 class="hero-title">Build, ship, eat (waffles).</h1>
                 <p class="hero-subtitle">The next step in your <a href="https://webdev.hackclub.com/" class="subtitle-link" target="_blank">webdev</a> journey.</p>
                 <div class="hero-buttons">
-                    <a href="https://submit.hackclub.com/waffles" class="btn btn-primary" target="_blank">
+                    <a href="https://forms.hackclub.com/waffles" class="btn btn-primary" target="_blank">
                         <i class="ph-bold ph-rocket-launch"></i>Submit Your Site
                     </a>
-                    <a href="requirements.html" class="btn">
+                    <a href="/requirements/" class="btn">
                         <i class="ph-bold ph-list-checks"></i>View Requirements
                     </a>
                 </div>
@@ -51,7 +40,7 @@
                 <div class="quick-actions">
                     <h3 class="quick-actions-title">Other ways to participate</h3>
                     <div class="quick-actions-grid">
-                        <a href="https://submit.hackclub.com/waffles" class="action-card" target="_blank">
+                        <a href="https://forms.hackclub.com/waffles" class="action-card" target="_blank">
                             <i class="ph-bold ph-users-three"></i>
                             <div class="action-card-title">Workshop Attendee</div>
                             <div class="action-card-desc">Submit from a workshop</div>
@@ -61,7 +50,7 @@
                             <div class="action-card-title">Club Meeting</div>
                             <div class="action-card-desc">Run a club event</div>
                         </a>
-                        <a href="get-started.html" class="action-card">
+                        <a href="/get-started/" class="action-card">
                             <i class="ph-bold ph-book-open"></i>
                             <div class="action-card-title">Get Started</div>
                             <div class="action-card-desc">New to coding?</div>
@@ -86,7 +75,7 @@
                     <div class="info-number">02</div>
                     <h2 class="info-title">What?</h2>
                     <div class="info-content">
-                        <strong>A website with JavaScript magic.</strong> Make it fun, unique, and packed with cool features! Check the <a href="requirements.html" class="info-link">requirements</a> page for details.
+                        <strong>A website with JavaScript magic.</strong> Make it fun, unique, and packed with cool features! Check the <a href="/requirements/" class="info-link">requirements</a> page for details.
                     </div>
                 </div>
 
@@ -100,7 +89,5 @@
             </div>
         </section>
     </div>
-
-    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
