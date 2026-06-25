@@ -1,0 +1,91 @@
+.markdown-content {
+    max-width: 900px;
+    margin: 0 auto 8rem;
+    padding: 3rem;
+    background: white;
+    border: 3px solid #8B4513;
+    color: #8B4513;
+    line-height: 1.7;
+}
+
+.markdown-content h1,
+.markdown-content h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.markdown-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.markdown-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 2rem 0 1rem;
+}
+
+.markdown-content p,
+.markdown-content li {
+    font-size: 1.1rem;
+    color: #D2691E;
+}
+
+.markdown-content ul {
+    margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.markdown-content a {
+    color: #8B4513;
+    font-weight: 700;
+}
+
+.markdown-content code {
+    background: #FFF8E7;
+    border: 1px solid rgba(139, 69, 19, 0.25);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+.markdown-content pre {
+    background: #FFF8E7;
+    border: 1px solid rgba(139, 69, 19, 0.25);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    overflow-x: auto;
+}
+
+.markdown-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid #D2691E;
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.25rem;
+    background: #FFF8E7;
+}
+
+.markdown-content blockquote p {
+    margin: 0;
+}
+
+.markdown-content ul:has(input[type="checkbox"]) {
+    list-style: none;
+    margin-left: 0;
+}
+
+.markdown-content input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .markdown-content {
+        margin: 0 1rem 4rem;
+        padding: 2rem;
+    }
+}

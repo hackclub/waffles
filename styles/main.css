@@ -182,7 +182,7 @@ nav::after {
 }
 
 #content {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.8s ease-in;
     width: 100%;
     min-height: 100vh;
@@ -214,7 +214,7 @@ nav::after {
     color: #8B4513;
     line-height: 1.2;
     margin-bottom: 1rem;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .hero-title .word {
@@ -225,8 +225,8 @@ nav::after {
 
 .hero-title .char {
     display: inline-block;
-    transform: translateY(100%);
-    opacity: 0;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .hero-subtitle {
@@ -234,8 +234,8 @@ nav::after {
     font-weight: 500;
     color: #D2691E;
     margin-bottom: 2.5rem;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .subtitle-link {
@@ -254,8 +254,8 @@ nav::after {
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .btn {
@@ -293,8 +293,8 @@ nav::after {
     margin-top: 4rem;
     padding-top: 4rem;
     border-top: 2px solid rgba(139, 69, 19, 0.2);
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .quick-actions-title {
@@ -356,8 +356,8 @@ nav::after {
 }
 
 .info-card {
-    opacity: 0;
-    transform: translateY(50px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .info-number {

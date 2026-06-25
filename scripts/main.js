@@ -1,16 +1,24 @@
 setTimeout(() => {
     const loader = document.getElementById('loader');
-    loader.classList.add('fade-out');
-    document.getElementById('content').classList.add('visible');
+    loader?.classList.add('fade-out');
+    document.getElementById('content')?.classList.add('visible');
 
     setTimeout(() => {
-        loader.classList.add('hidden');
+        loader?.classList.add('hidden');
         initAnimations();
     }, 800);
 }, 3200);
 
 function initAnimations() {
+    if (typeof gsap === 'undefined') {
+        return;
+    }
+
     const heroTitle = document.querySelector('.hero-title');
+    if (!heroTitle) {
+        return;
+    }
+
     const text = heroTitle.textContent.trim();
 
     heroTitle.style.visibility = 'visible';
